@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import PaginaBase from '../PaginaBase';
-export default function Home() {
+export default function Home({ navigation }) {
 
     return (
         <View style={styles.container}>
@@ -11,18 +11,18 @@ export default function Home() {
                     <Text style={[styles.text, styles.title]}>Boas-vindas!</Text>
                     <Text style={styles.text}>Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</Text>
 
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
                         <Text style={styles.textoBotao}>Login</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Cadastro')} >
                         <Text style={styles.textoBotao}>Cadastro</Text>
                     </TouchableOpacity>
 
                     <Image source={require('../../assets/CachorroEGato.png')} style={styles.imagem}></Image>
                 </View>
-            </PaginaBase>
-        </View>
+            </PaginaBase >
+        </View >
     );
 }
 
