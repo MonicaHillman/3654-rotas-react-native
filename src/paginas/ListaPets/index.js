@@ -3,7 +3,7 @@ import Card from "./Card";
 import pets from "../../mocks/pets";
 import PaginaBase from "../PaginaBase";
 
-export default function ListaPets() {
+export default function ListaPets({ navigation }) {
     return (
         <View style={styles.container}>
             <PaginaBase>
@@ -11,7 +11,7 @@ export default function ListaPets() {
                     <Text style={styles.text}>Olá! Veja os amigos disponíveis para adoção!</Text>
                     <FlatList
                         data={pets}
-                        renderItem={({ item }) => <Card {...item} />}
+                        renderItem={({ item }) => <Card {...item} navigation={navigation} />}
                     >
                     </FlatList>
                 </View>
