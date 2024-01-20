@@ -36,7 +36,7 @@ export default function Login({ navigation }) {
                             placeholderTextColor={'#BCBCBC'}
                         />
 
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Tab')}>
                             <Text style={styles.textoBotao}>Entrar</Text>
                         </TouchableOpacity>
                     </View>

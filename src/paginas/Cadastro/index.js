@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, ImageBackground, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Image, ImageBackground, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import PaginaBase from '../PaginaBase';
 
 export default function Cadastro() {
