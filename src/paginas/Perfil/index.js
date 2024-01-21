@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import PaginaBase from "../PaginaBase";
 import { ScrollView } from "react-native-gesture-handler";
 
