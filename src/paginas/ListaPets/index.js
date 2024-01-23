@@ -1,9 +1,9 @@
-import { FlatList, ImageBackground, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
 import Card from "./Card";
 import pets from "../../mocks/pets";
 import PaginaBase from "../PaginaBase";
 
-export default function ListaPets({ navigation }) {
+export default function ListaPets() {
     return (
         <View style={styles.container}>
             <PaginaBase>
@@ -12,7 +12,7 @@ export default function ListaPets({ navigation }) {
                     <FlatList
                         data={pets}
                         renderItem={({ item }) => <Card {...item}
-                            navigation={navigation} />}
+                        />}
                     >
                     </FlatList>
                 </View>
