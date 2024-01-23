@@ -3,7 +3,7 @@ import { Image, ImageBackground, StyleSheet, Text, View, TextInput, TouchableOpa
 import PaginaBase from '../PaginaBase';
 
 
-export default function Login({ navigation }) {
+export default function Login() {
     const [nome, onChangeNome] = React.useState('');
     const [senha, onChangeSenha] = React.useState('');
 
