@@ -1,45 +1,35 @@
-import { View, ScrollView, StyleSheet, Image, FlatList, Text } from "react-native";
+import { View, ScrollView, StyleSheet, Image, Text } from "react-native";
 import PaginaBase from "../PaginaBase";
-import { Link, useRoute } from "@react-navigation/native";
-import uuid from 'react-native-uuid';
-export default function Sobre({ navigation }) {
-    const route = useRoute();
-    const { nome, imagem, descricao, localidade } = route.params;
+import { Link } from "@react-navigation/native";
+export default function Sobre() {
 
     return (
         <View style={styles.container}>
             <ScrollView>
                 <PaginaBase>
                     <View style={styles.contentContainer}>
-                        <Image source={imagem} style={styles.imagem} />
-                        <Text style={styles.text}>{nome}</Text>
-
-                        {
-                            descricao.informacoes.map((item) => <Text style={styles.textList} key={uuid.v4()}>{item}</Text>)
-                        }
-
+                        <Image source={require('../../assets/Dunga.png')} style={styles.imagem} />
+                        <Text style={styles.text}>Dunga</Text>
+                        <Text style={styles.textList}>Macho</Text>
+                        <Text style={styles.textList}>Porte pequeno</Text>
+                        <Text style={styles.textList}>Calmo e educado</Text>
+                        <Text style={styles.textList}>Se dá bem com outros cachorros</Text>
+                        <Text style={styles.textList}>Gosta de brincar e passear</Text>
+                        <Text style={styles.textList}>Gosta de crianças mais velhas mas se assusta com bebês</Text>
                         <View style={styles.containerContato}>
                             <Text style={styles.local}>
-                                {localidade}</Text>
+                                Rio de Janeiro (RJ)</Text>
                             <View style={styles.informacoes}>
                                 <View style={styles.containerInteracoes}>
                                     <Image source={require('../../assets/chat.png')} />
-                                    <Link to={{
-                                        screen: 'Mensagem', params: {
-                                            nomePet: nome
-                                        },
-                                    }} style={styles.local}>
+                                    <Link to={'/'}>
                                         Falar com responsável
                                     </Link>
                                 </View>
 
                                 <View style={styles.containerInteracoes}>
                                     <Image source={require('../../assets/share.png')} />
-                                    <Link to={{
-                                        screen: 'Mensagem', params: {
-                                            nomePet: nome
-                                        },
-                                    }} style={styles.local}>
+                                    <Link to={'/'}>
                                         Compartilhar
                                     </Link>
                                 </View>
@@ -47,10 +37,8 @@ export default function Sobre({ navigation }) {
                         </View>
 
                         <Text style={styles.textResumo}>{descricao.resumo}</Text>
-
-                        {
-                            descricao.fotos.map((item) => <Image source={item} key={uuid.v4()} style={styles.image} />)
-                        }
+                        <Image source={require('../../assets/Dunga1.png')} style={styles.image} />
+                        <Image source={require('../../assets/Dunga2.png')} style={styles.image} />
                     </View>
 
 

@@ -70,7 +70,7 @@ export default function Cadastro() {
                             />
                         </View>
 
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Tab')}>
                             <Text style={styles.textoBotao}>Cadastrar</Text>
                         </TouchableOpacity>
                     </View>

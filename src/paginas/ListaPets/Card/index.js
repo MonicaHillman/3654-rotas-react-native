@@ -1,15 +1,10 @@
 import { Link } from "@react-navigation/native";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function Card({ nome, idade, porte, imagem, caracteristicas, localidade, descricao, navigation }) {
+export default function Card({ nome, idade, porte, imagem, caracteristicas, localidade }) {
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('Sobre', {
-                nome: nome,
-                imagem: imagem,
-                localidade: localidade,
-                descricao: descricao,
-            })}>
+            <TouchableOpacity>
                 <Image source={imagem} />
             </TouchableOpacity>
             <View style={styles.containerInformacoes}>
@@ -26,11 +21,7 @@ export default function Card({ nome, idade, porte, imagem, caracteristicas, loca
                         {localidade}</Text>
                     <View style={styles.containerChat}>
                         <Image source={require('../../../assets/chat.png')} />
-                        <Link to={{
-                            screen: 'Mensagem', params: {
-                                nomePet: nome
-                            },
-                        }} style={styles.local}>
+                        <Link to={'/'} style={styles.local}>
                             Falar com responsável
                         </Link>
                     </View>
